@@ -95,7 +95,7 @@ h4 {
 
 .wordmark.large {
   gap: 14px;
-  margin-bottom: 64px;
+  margin-bottom: 44px;
 }
 
 .wordmark.large strong {
@@ -170,31 +170,37 @@ h4 {
 
 .eyebrow {
   color: var(--teal);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 750;
-  letter-spacing: 0.2em;
-  margin-bottom: 18px;
+  letter-spacing: 0.14em;
+  line-height: 1.45;
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .concept-note h1 {
   color: var(--navy);
-  font-size: clamp(40px, 4vw, 50px);
-  line-height: 1.08;
-  letter-spacing: -0.06em;
-  margin-bottom: 22px;
+  font-size: clamp(31px, 3.2vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
 }
 
 .description {
   color: var(--slate);
-  font-size: 17px;
-  line-height: 1.55;
-  max-width: 380px;
+  font-size: 15px;
+  line-height: 1.48;
+  max-width: 410px;
+}
+
+.sandbox-copy p + p {
+  margin-top: 11px;
 }
 
 .palette {
   display: flex;
   gap: 10px;
-  margin: 46px 0;
+  margin: 28px 0;
 }
 
 .palette span {
@@ -213,10 +219,10 @@ h4 {
 .preview-hints {
   border-top: 1px solid #d8e1e9;
   color: var(--slate);
-  font-size: 14px;
-  line-height: 1.55;
-  padding-top: 24px;
-  max-width: 350px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 20px;
+  max-width: 410px;
 }
 
 .preview-hints strong {
