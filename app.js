@@ -669,9 +669,12 @@ function agentScreen() {
     ${header("AI Agent", `<button class="icon-button compact" data-action="route" data-route="agent-settings">${icon("sliders", 19)}</button>`)}
     <div class="screen-body">
       <div class="card agent-hero">
-        <span class="agent-logo">Kia Assistant</span>
-        <p>AI Seat · ${workspace.agentNumber}</p>
-        <button class="secondary" data-action="route" data-route="plans">View plans</button>
+        <div class="agent-hero-row">
+          <span class="setting-icon">${icon("sparkle", 18)}</span>
+          <div><strong>Kia Assistant</strong><p>AI Agent line · ${workspace.agentNumber}</p></div>
+          ${badge("Live", "green")}
+        </div>
+        <button class="secondary wide" data-action="route" data-route="plans">View plans</button>
       </div>
       <div class="filter-chips">
         ${["All", "Unread", "Starred", "Archived"].map((item, index) => `<button class="chip ${index === 1 ? "active" : ""}" data-action="toast" data-message="${item} conversations">${item}</button>`).join("")}
@@ -705,11 +708,11 @@ function setupScreen() {
         ${["Train", "Confirm", "Test", "Go Live"].map((item, i) => `<span class="${i <= Math.floor((state.setupStep - 1) / 2) ? "current" : ""}">${item}</span>`).join("")}
       </div>
       <div class="card wizard-card agent-wizard">
-        <span class="pill ai">Step ${state.setupStep} of 7</span>
+        <span class="pill setup-pill">Step ${state.setupStep} of 7</span>
         <h2>${title}</h2>
         <p>${body}</p>
         <div class="setting-list embedded">
-          ${rows.map(row => `<div class="setting-row"><span class="setting-icon">${icon("sparkle", 18)}</span><span class="label"><strong>${row}</strong></span></div>`).join("")}
+          ${rows.map(row => `<div class="setting-row"><span class="setting-icon setup-row-icon">${icon("sparkle", 18)}</span><span class="label"><strong>${row}</strong></span></div>`).join("")}
         </div>
         ${state.setupStep === 7 ? `<button class="primary ai-button wide" data-action="toast" data-message="Calling AI Agent test number">${icon("phone", 17)} Call AI Agent</button>` : ""}
       </div>
@@ -833,19 +836,20 @@ function mobileScreen() {
   <section class="screen">
     ${header("Mobile", `<button class="icon-button compact" data-action="toast" data-message="Mobile service alerts opened">${icon("bell", 19)}</button>`)}
     <div class="screen-body">
-      <div class="card mobile-hero second-number-hero">
-        <p class="card-kicker">KiaOra Mobile</p>
-        <div class="mobile-hero-row">
-          <div><h2>Take Your Own Second Number</h2><p>Keep your personal SIM private. Call and text customers from a KiaOra number inside this app.</p></div>
-          <div class="pool-ring second-ring" style="--pool:${percent}%"><strong>2</strong><span>numbers</span></div>
+      <div class="card mobile-summary-card">
+        <div class="mobile-summary-head">
+          <span class="setting-icon kiaora-icon">${icon("phone", 19)}</span>
+          <div><p class="card-kicker">KiaOra Mobile</p><h2>Take Your Own Second Number</h2></div>
+          <span class="voice-pill app-only">APP</span>
         </div>
-        <div class="pool-stats">
-          <span><strong>${deviceNumber.type}</strong>device number</span>
-          <span><strong>App only</strong>caller ID</span>
-          <span><strong>Kia Agent</strong>routing ready</span>
+        <p class="mobile-summary-copy">Keep your personal SIM private. Call and text customers from a KiaOra number inside this app.</p>
+        <div class="mobile-status-grid">
+          <div><strong>2</strong><span>numbers</span></div>
+          <div><strong>App only</strong><span>caller ID</span></div>
+          <div><strong>Ready</strong><span>Kia Agent</span></div>
         </div>
-        <div class="button-row hero-actions">
-          <button class="primary teal-button" data-action="tab" data-tab="keypad">Call from KiaOra</button>
+        <div class="button-row hero-actions compact-actions">
+          <button class="primary" data-action="tab" data-tab="keypad">Call from KiaOra</button>
           <button class="secondary" data-action="route" data-route="second-number-flow">Add number</button>
         </div>
       </div>

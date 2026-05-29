@@ -503,8 +503,8 @@ h4 {
 }
 
 .pill.ai {
-  color: var(--violet);
-  background: var(--violet-soft);
+  color: var(--blue);
+  background: var(--blue-soft);
 }
 
 .pill.alert {
@@ -704,7 +704,7 @@ h4 {
 }
 
 .primary.ai-button {
-  background: var(--violet);
+  background: var(--blue);
 }
 
 .primary.teal-button {
@@ -2240,7 +2240,7 @@ h4 {
   padding: 4px;
   margin: 0 0 14px;
   border-radius: 14px;
-  background: #f2eafa;
+  background: var(--cloud);
 }
 
 .setup-track span {
@@ -2248,20 +2248,21 @@ h4 {
   display: grid;
   place-items: center;
   border-radius: 11px;
-  color: #8f78a8;
+  color: var(--slate);
   font-size: 10px;
   font-weight: 760;
 }
 
 .setup-track span.current {
-  color: var(--white);
-  background: var(--violet);
+  color: var(--navy);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 }
 
 .agent-wizard {
-  min-height: 456px;
-  background: #fffafe;
-  border: 1px solid #efdffb;
+  min-height: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
 }
 
 .agent-wizard h2 {
@@ -2279,39 +2280,52 @@ h4 {
   margin-bottom: 14px;
 }
 
+.setup-pill {
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.setup-row-icon {
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+
 .setting-list.embedded {
   box-shadow: none;
   border: 1px solid var(--line);
 }
 
 .agent-hero {
-  text-align: center;
-  background: linear-gradient(180deg, #f8efff, #ffffff);
-  border: 1px solid #ead8fb;
+  background: var(--white);
+  border: 1px solid var(--line);
 }
 
-.agent-logo {
-  display: inline-flex;
+.agent-hero-row {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  color: var(--violet);
-  font-size: 22px;
-  font-weight: 850;
-  margin-bottom: 8px;
+  gap: 11px;
+  margin-bottom: 13px;
 }
 
-.agent-logo::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  border-radius: 9px;
-  background: linear-gradient(145deg, var(--violet), #bd74ff);
+.agent-hero-row .setting-icon {
+  color: var(--blue);
+  background: var(--blue-soft);
 }
 
-.agent-hero p {
+.agent-hero-row div {
+  flex: 1;
+}
+
+.agent-hero-row strong {
+  display: block;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.agent-hero-row p {
   color: var(--slate);
   font-size: 12px;
-  margin-bottom: 13px;
+  margin-top: 3px;
 }
 
 .empty-state {
@@ -2358,8 +2372,8 @@ h4 {
 }
 
 .service-tile.selected {
-  outline: 2px solid var(--violet);
-  background: #fbf5ff;
+  outline: 2px solid var(--blue);
+  background: var(--blue-soft);
 }
 
 .mobile-hero {
@@ -2417,6 +2431,76 @@ h4 {
   color: rgba(255, 255, 255, .78);
   font-size: 12px;
   line-height: 1.4;
+}
+
+.mobile-summary-card {
+  border: 1px solid var(--line);
+}
+
+.mobile-summary-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.mobile-summary-head > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobile-summary-head h2 {
+  color: var(--navy);
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-top: 4px;
+}
+
+.mobile-summary-head .voice-pill {
+  margin: 0;
+}
+
+.mobile-summary-copy {
+  color: var(--slate);
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 12px 0;
+}
+
+.mobile-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mobile-status-grid div {
+  padding: 10px;
+  border-radius: 13px;
+  background: var(--cloud);
+}
+
+.mobile-status-grid strong {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.mobile-status-grid span {
+  display: block;
+  color: var(--slate);
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.hero-actions.compact-actions {
+  margin-top: 0;
+}
+
+.hero-actions.compact-actions .primary,
+.hero-actions.compact-actions .secondary {
+  flex: 1;
 }
 
 .mobile-line {
@@ -2737,18 +2821,18 @@ h4 {
 }
 
 .agent-detail-summary {
-  background: linear-gradient(180deg, #fffafe, #ffffff);
-  border-color: #ead8fb;
+  background: var(--white);
+  border: 1px solid var(--line);
 }
 
 .agent-setting-icon {
-  color: var(--violet);
-  background: var(--violet-soft);
+  color: var(--blue);
+  background: var(--blue-soft);
 }
 
 .tab[data-tab="agent"].active {
-  color: var(--violet);
-  background: var(--violet-soft);
+  color: var(--blue);
+  background: var(--blue-soft);
 }
 
 svg {
