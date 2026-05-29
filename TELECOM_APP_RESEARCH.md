@@ -20,7 +20,7 @@ Research focus:
 - Account/service switching
 - Mobile plan, top-up, payment and usage patterns
 - Help, shop, rewards and support surfaces
-- Design ideas that can inspire KiaOra Mobile / KiaOra Voice
+- Design ideas that can inspire KiaOra Mobile
 
 ## Cross-App Patterns
 

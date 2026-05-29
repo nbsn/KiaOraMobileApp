@@ -59,7 +59,7 @@ const secondNumbers = [
 
 const mobileLines = [
   { name: "Primary Mobile", number: "+64 21 000 0116", type: "eSIM", usage: 18.4, limit: 40, status: "Active" },
-  { name: "AI Agent Line", number: "+64 9 000 7902", type: "Voice", usage: 0.8, limit: 5, status: "Active" },
+  { name: "AI Agent Line", number: "+64 9 000 7902", type: "App number", usage: 0.8, limit: 5, status: "Active" },
   { name: "Team Mobile", number: "+64 22 000 7902", type: "Physical SIM", usage: 11.6, limit: 25, status: "Active" },
 ];
 
@@ -70,7 +70,7 @@ const mobileAddOns = [
 ];
 
 const mobilePlans = [
-  ["KiaOra Voice Pro", "Monthly", "40GB data · Unlimited NZ calls · 500 SMS", "NZ$89"],
+  ["KiaOra Mobile Pro", "Monthly", "40GB data · Unlimited NZ calls · 500 SMS", "NZ$89"],
   ["Team Connect", "Monthly", "80GB shared pool · 3 mobile lines · AI Agent line", "NZ$149"],
   ["Event Weekend Boost", "7 days", "20GB data · Priority support · Roaming ready", "NZ$18"],
 ];
@@ -78,11 +78,11 @@ const mobilePlans = [
 const conversations = [
   { name: "+64 20 000 2627", preview: "You: Hello Back", time: "4:58 PM", status: "Open", kind: "Chats", meta: "Failed to send", tone: "failed" },
   { name: "VIP Inquiry", preview: "Kia Assistant took a message and summarized the caller details.", time: "3:18 PM", status: "Unread", kind: "Calls", meta: "Handled by Kia Agent", tone: "ai" },
-  { name: "KiaOra Team", preview: "Welcome to KiaOra Voice. Your inbox is ready.", time: "Yesterday", status: "Done", kind: "Chats", meta: "Workspace", tone: "normal" },
+  { name: "KiaOra Team", preview: "Welcome to KiaOra Mobile. Your inbox is ready.", time: "Yesterday", status: "Done", kind: "Chats", meta: "Workspace", tone: "normal" },
 ];
 
 const contacts = [
-  { name: "KiaOra Team", subtitle: "KiaOra Voice", avatar: "K", company: "KiaOra", role: "Support", phone: workspace.phone, email: "support@kiaora.example", access: "Everyone", tags: "Workspace" },
+  { name: "KiaOra Team", subtitle: "KiaOra Mobile", avatar: "K", company: "KiaOra", role: "Support", phone: workspace.phone, email: "support@kiaora.example", access: "Everyone", tags: "Workspace" },
   { name: "Kia Assistant Support", subtitle: "Agent setup specialist", avatar: "A", company: "KiaOra", role: "Agent specialist", phone: workspace.agentNumber, email: "agent@kiaora.example", access: "Owner", tags: "AI Agent" },
   { name: "45 East VIP Line", subtitle: workspace.phone, avatar: "V", company: "45 East", role: "VIP enquiries", phone: "+64 20 000 2627", email: "vip@45east.example", access: "Everyone", tags: "VIP, Open" },
 ];
@@ -144,7 +144,7 @@ const accountDetails = {
     title: "General",
     intro: "Workspace identity, business hours and the default call flow for the business inbox.",
     rows: [
-      ["Workspace name", "KiaOra Voice"],
+      ["Workspace name", "KiaOra Mobile"],
       ["Business", workspace.business],
       ["Business hours", "Mon-Fri · 9:00 AM-6:00 PM"],
       ["Default call flow", "Team first, then AI Agent after 20 seconds"],
@@ -169,7 +169,7 @@ const accountDetails = {
     rows: [
       ["Payment method", "Visa ending 4242"],
       ["Next billing date", "2 Jun 2026"],
-      ["Current plan", "KiaOra Voice Pro"],
+      ["Current plan", "KiaOra Mobile Pro"],
       ["Monthly total", "NZ$89.00"],
       ["Billing address", "Auckland, New Zealand"],
     ],
@@ -244,7 +244,7 @@ const accountDetails = {
   },
   "Chat with us": {
     title: "Chat with us",
-    intro: "Support conversation with the KiaOra Voice team.",
+    intro: "Support conversation with the KiaOra Mobile team.",
     rows: [
       ["Status", "Online"],
       ["Last message", "Hi there, how can we help?"],
@@ -421,7 +421,7 @@ function icon(name, size = 22) {
 }
 
 function logo() {
-  return `<div class="wordmark"><span class="mark-wave"></span><span><strong>KiaOra</strong><small>Voice</small></span></div>`;
+  return `<div class="wordmark"><span class="mark-wave"></span><span><strong>KiaOra</strong><small>Mobile</small></span></div>`;
 }
 
 function header(title, controls = "") {
@@ -960,7 +960,7 @@ function mobilePlansScreen() {
       <div class="segments details-tabs"><button class="segment active">Plans</button><button class="segment" data-action="toast" data-message="Add-ons selected">Add-ons</button><button class="segment" data-action="toast" data-message="Roaming selected">Roaming</button></div>
       <p class="group-label">Current</p>
       <div class="card current-plan-card large">
-        <div><p class="card-kicker">Active monthly plan</p><h3>KiaOra Voice Pro</h3><span>40GB data · Unlimited NZ calls · 500 SMS</span></div>
+        <div><p class="card-kicker">Active monthly plan</p><h3>KiaOra Mobile Pro</h3><span>40GB data · Unlimited NZ calls · 500 SMS</span></div>
         <strong>NZ$89</strong>
       </div>
       <p class="group-label">Available products</p>

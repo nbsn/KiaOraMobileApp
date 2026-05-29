@@ -1,4 +1,4 @@
-# KiaOra Voice Integrated Demo
+# KiaOra Mobile Integrated Demo
 
 English-only clickable iPhone-style prototype that combines a business communication workspace with an AI phone agent flow.
 

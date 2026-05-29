@@ -1,4 +1,4 @@
-# KiaOra Voice Prototype Handoff
+# KiaOra Mobile Prototype Handoff
 
 ## Project Location
 
@@ -22,7 +22,7 @@ main
 
 ## Current Product Direction
 
-This project is now an English-only KiaOra Voice prototype. It is no longer the earlier KiaOra Mobile / 2degrees family data pool demo.
+This project is now an English-only KiaOra Mobile prototype. It is no longer the earlier KiaOra Mobile / 2degrees family data pool demo.
 
 The current app combines:
 
@@ -33,7 +33,7 @@ The current app combines:
 - Mobile services
 - Settings and account management
 
-External reference branding has been removed. The retained UX patterns are represented under KiaOra-owned names such as KiaOra Voice, Kia Assistant and Kia Agent.
+External reference branding has been removed. The retained UX patterns are represented under KiaOra-owned names such as KiaOra Mobile, Kia Assistant and Kia Agent.
 
 ## Important Files
 
@@ -181,7 +181,7 @@ Current project requirements:
 - English only
 - No visible external reference branding
 - No Chinese UI copy in the main prototype
-- Use KiaOra Voice, Kia Assistant and Kia Agent naming
+- Use KiaOra Mobile, Kia Assistant and Kia Agent naming
 - Use New Zealand phone numbers starting with `+64`
 
 Useful check:
