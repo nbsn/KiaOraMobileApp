@@ -109,8 +109,9 @@ h4 {
 }
 
 .mark-wave {
-  width: 34px;
-  height: 34px;
+  --mark: 34px;
+  width: var(--mark);
+  height: var(--mark);
   border-radius: 11px;
   display: inline-block;
   background: var(--navy);
@@ -118,10 +119,12 @@ h4 {
   overflow: hidden;
 }
 
+/* Two concentric arcs, centred in the tile. Proportions match the iOS app icon. */
 .mark-wave::before,
 .mark-wave::after {
   content: "";
   position: absolute;
+  box-sizing: border-box;
   border-radius: 50%;
   border: 3px solid var(--teal);
   border-left-color: transparent;
@@ -130,42 +133,30 @@ h4 {
 }
 
 .mark-wave::before {
-  width: 27px;
-  height: 27px;
-  left: -11px;
-  top: 4px;
+  width: calc(var(--mark) * 0.92);
+  height: calc(var(--mark) * 0.92);
+  left: calc(var(--mark) * -0.19);
+  top: calc(var(--mark) * 0.04);
 }
 
 .mark-wave::after {
-  width: 17px;
-  height: 17px;
-  left: -6px;
-  top: 9px;
+  width: calc(var(--mark) * 0.606);
+  height: calc(var(--mark) * 0.606);
+  left: calc(var(--mark) * -0.033);
+  top: calc(var(--mark) * 0.197);
   border-color: var(--white);
   border-left-color: transparent;
   border-bottom-color: transparent;
 }
 
 .wordmark.large .mark-wave {
-  width: 55px;
-  height: 55px;
+  --mark: 55px;
   border-radius: 18px;
 }
 
-.wordmark.large .mark-wave::before {
-  width: 44px;
-  height: 44px;
-  left: -17px;
-  top: 5px;
-  border-width: 4px;
-}
-
+.wordmark.large .mark-wave::before,
 .wordmark.large .mark-wave::after {
-  width: 29px;
-  height: 29px;
-  left: -10px;
-  top: 12px;
-  border-width: 4px;
+  border-width: 5px;
 }
 
 .eyebrow {
